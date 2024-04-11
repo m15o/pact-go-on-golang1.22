@@ -18,7 +18,7 @@ jobs:
       - name: Install libpact_ffi
         run: |
           go install github.com/pact-foundation/pact-go/v2@v2.0.4
-          PACT_GO=$(command pact-go)
+          PACT_GO=$(command -v pact-go)
           sudo "$PACT_GO" -l DEBUG install
       - name: Build
         run: go test -v -race ./...
