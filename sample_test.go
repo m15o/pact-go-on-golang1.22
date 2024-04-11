@@ -18,17 +18,7 @@ import (
 type S = matchers.S
 
 var Like = matchers.Like
-var EachLike = matchers.EachLike
-var Term = matchers.Term
 var Regex = matchers.Regex
-var HexValue = matchers.HexValue
-var Identifier = matchers.Identifier
-var IPAddress = matchers.IPAddress
-var IPv6Address = matchers.IPv6Address
-var Timestamp = matchers.Timestamp
-var Date = matchers.Date
-var Time = matchers.Time
-var UUID = matchers.UUID
 var ArrayMinLike = matchers.ArrayMinLike
 
 type Map = matchers.MapMatcher
@@ -38,12 +28,8 @@ var Integer = matchers.Integer
 var Equality = matchers.Equality
 var Includes = matchers.Includes
 var FromProviderState = matchers.FromProviderState
-var EachKeyLike = matchers.EachKeyLike
 var ArrayContaining = matchers.ArrayContaining
 var ArrayMinMaxLike = matchers.ArrayMinMaxLike
-var ArrayMaxLike = matchers.ArrayMaxLike
-var DateGenerated = matchers.DateGenerated
-var TimeGenerated = matchers.TimeGenerated
 var DateTimeGenerated = matchers.DateTimeGenerated
 
 func TestConsumerV4(t *testing.T) {
