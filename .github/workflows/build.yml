@@ -18,6 +18,6 @@ jobs:
       - name: Install libpact_ffi
         run: |
           go install github.com/pact-foundation/pact-go/v2@v2.0.4
-          pact-go -l DEBUG install
+          sudo pact-go -l DEBUG install
       - name: Build
         run: go test -v -race ./...
