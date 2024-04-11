@@ -10,6 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         go-version: [ '1.21.9', '1.22.0', '1.22.1', '1.22.2' ]
+        race-opt: [ 'true', 'false' ]
 
     steps:
       - uses: actions/checkout@v4
@@ -22,4 +23,11 @@ jobs:
           PACT_GO=$(command -v pact-go)
           sudo "$PACT_GO" -l DEBUG install
       - name: Build
-        run: go test -v -race ./...
+        env:
+          RACE_OPT: ${{ matrix.race }}
+        run: |
+          if [ "$RACE_OPT" == "true" ]; then
+            go test -v -race ./...
+          else 
+            go test -v ./...
+          fi
