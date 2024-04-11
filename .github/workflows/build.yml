@@ -24,7 +24,7 @@ jobs:
           sudo "$PACT_GO" -l DEBUG install
       - name: Build
         env:
-          RACE_OPT: ${{ matrix.race }}
+          RACE_OPT: ${{ matrix.race-opt }}
         run: |
           if [ "$RACE_OPT" == "true" ]; then
             go test -v -race ./...
