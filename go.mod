@@ -1,6 +1,6 @@
 module pact-go-test
 
-go 1.22
+go 1.21
 
 require (
 	github.com/pact-foundation/pact-go/v2 v2.0.4
